@@ -1,7 +1,6 @@
 # Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour
 Digital Image Processing Object detection using Morphological Operations and Contour
 ##
-# Problem 1
 #### calculate the centroids of each object and display them in red color. Note: you cannot use Image Moments to find centroids
 ## input image 
 ![input](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/data/circle3.jpg)
@@ -47,3 +46,20 @@ Digital Image Processing Object detection using Morphological Operations and Con
 ## 6- The code checks if the area of the contour is within a certain range to filter out noise.
 # output
 ![output](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.36.15%20PM.png)
+
+#
+#
+#
+## For the image shown in Figure 2, find the number of persons in the image. Draw a bounding box around each person and display the image.
+#### 1- Apply bilateral filtering on the input image img with a filter size of 15x15 and sigma values of 15.
+#### 2- Threshold the filtered image using a threshold value of 140, and set all pixel values below this threshold to 0. The thresholding mode used here is cv2.THRESH_TOZERO, which means all pixel values above the threshold are kept as is, while pixel values below the threshold are set to 0.
+#### 3- Define a 5x5 kernel of ones to use for morphological operations.
+#### 4- Perform erosion operation on the thresholded image to remove small objects and noise.
+#### 5- Perform dilation operation on the eroded image to fill in gaps and expand the remaining objects.
+#### 6- Find contours in the dilated image using cv2.findContours function. The cv2.RETR_EXTERNAL flag retrieves only the external contours and cv2.CHAIN_APPROX_SIMPLE compresses horizontal, vertical, and diagonal segments and leaves only their end points.
+#### 7- Define minimum and maximum area thresholds for the detected contours.
+#### 8- Draw a green bounding box around each remaining contour in the img_bbox image.
+#### preprocessing 
+![output](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.36.29%20PM.png)
+#
+![output](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.36.42%20PM.png)
