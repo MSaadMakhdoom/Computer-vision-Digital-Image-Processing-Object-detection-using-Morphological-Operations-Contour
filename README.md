@@ -22,3 +22,28 @@ Digital Image Processing Object detection using Morphological Operations and Con
 ###### 3- Apply dilation to the marker image with the kernel defined in step 2 to fill the centers using cv2.dilate() function and store the result in dilated_img
 ## output
 ![input](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.35.51%20PM.png)
+
+##
+# Calculate the diameter of the biggest hole (figure-1 a) and display its diameter above that circle in green color.
+##
+
+#### 1- Threshold the input image to create a binary image where white represents the region of interest.
+#### 2- Find contours in the binary image using cv2.findContours() function.
+#### 3- Create a copy of the input image to draw the diameter of the largest circle on.
+#### 4- Keep track of the contour with the largest diameter found so far.
+#### 5- Draw a circle with the diameter on the copy of the input image and display the diameter value on the image.
+#### 6- Draw a rectangle with the largest diameter on the copy of the input image.
+
+![output](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.36.02%20PM.png)
+#
+
+# count the number of objects with holes and without holes and display the count
+##
+## 1- Thresholding method is applied to create a binary image, where the background is black and the objects are white.
+## 2- The findContours() function from OpenCV is used to find contours in the binary image.
+## 3- Two counters are initialized to keep track of the number of circles with and without holes.
+## 4- The code loops over each contour found in the image.
+## 5- For each contour, the area is calculated using the contourArea() function.
+## 6- The code checks if the area of the contour is within a certain range to filter out noise.
+# output
+![output](https://github.com/MSaadMakhdoom/Computer-vision-Digital-Image-Processing-Object-detection-using-Morphological-Operations-Contour/blob/main/output/Screenshot%202023-06-05%20at%206.36.15%20PM.png)
